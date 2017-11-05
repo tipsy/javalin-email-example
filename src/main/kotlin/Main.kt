@@ -4,9 +4,7 @@ import org.apache.commons.mail.SimpleEmail
 
 fun main(args: Array<String>) {
 
-    val app = Javalin.create()
-            .port(7000)
-            .start()
+    val app = Javalin.start(7000)
 
     app.get("/") { ctx ->
         ctx.html("""
